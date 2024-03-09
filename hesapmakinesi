@@ -1,0 +1,38 @@
+actor _hesapmak {
+
+  var hucre : Int = 0;
+
+  
+  public func toplama(n : Int) : async Int {
+    hucre += n;
+    return hucre;
+  };
+
+  
+  public func cikarma(n : Int) : async Int {
+    hucre -= n;
+    return hucre;
+  };
+
+  
+  public func carpma(n : Int) : async Int {
+    hucre *= n;
+    return hucre;
+  };
+
+  
+  public func bolme(n : Int) : async ?Int {
+    if (n == 0) {
+      
+      return null;
+    } else {
+      hucre /= n;
+      return ?hucre;
+    };
+  };
+
+  
+  public func temzile() : async () {
+    hucre := 0;
+  };
+};
